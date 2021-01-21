@@ -4,6 +4,7 @@
   "description": "social media app ",
   "main": "app.js",
   "scripts": {
+    "start-dev": "nodemon app",
     "start": "node app"
   },
   "author": "TVR",

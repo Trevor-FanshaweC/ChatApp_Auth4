@@ -12,7 +12,7 @@
 	<main id="app">
 		<section class="form-container">
 			<label for="nickname">Your Nickname (optional)</label>
-			<input type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 
 			<form>
 				<label for="message">Something to say?</label>
@@ -24,7 +24,7 @@
 		<section class="messages">
 			<ul id="messages">
 				<!-- render a new message component for every message -->
-				<newmessage v-for="message in messages" :msg="message"></newmessage>
+				<newmessage v-for="(message, index) in messages" :msg="message" :key="index"></newmessage>
 			</ul>
 		</section>
 	</main>
